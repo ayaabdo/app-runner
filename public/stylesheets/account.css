@@ -1,0 +1,167 @@
+/*
+ * Account Page CSS Styles
+ *
+ * Contains page-specific CSS styles that 
+ * are not used in other pages
+ */
+/*-------------Create Account----------------------*/
+
+/* Orange background image */
+.signup_background {
+  background-image: url("/images/Group109.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  background-size: 100%;
+  width: 100%;
+  height: 90vh;
+  z-index: -1;
+  left: -10px;
+  position: absolute;
+}
+
+/* The form */
+.signup {
+  background: #fff;
+  min-width: 30em;
+  margin: 1em 33.3% 10em 33.3%;
+  border: 1px solid #777;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 var(--boxshadow-color);
+  padding: 30px 50px 10px 50px;
+}
+
+/* Heading of Create Account */
+.heading {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  margin-left: -1.1em;
+  float: left;
+  width: 250px;
+  text-align: left;
+}
+
+/* Label + field */
+.input_field {
+  margin: 1em 1% 1em 1%;
+}
+
+/* Labels */
+.signup label {
+  clear: both;
+  float: left;
+}
+
+/* Asterisk after labels */
+/* Code from: https://stackoverflow.com/questions/11197671/use-css-to-automatically-add-required-field-asterisk-to-form-inputs */
+.signup label.required::after {
+  content: " *";
+  color: var(--error-color);
+}
+
+/* Text fields for username and password */
+input[type="text"],
+[type="password"],
+[type="password_confirmation"],
+[type="email"],
+[type="tel"],
+[type="file"] {
+  width: 60%;
+  min-width: 10em;
+  height: 2.2rem;
+  padding: 12px 10px;
+  margin-bottom: 1em;
+  border: 1px solid #777;
+  border-radius: 5px;
+  font-size: 1rem;
+  float: right;
+}
+
+/* File upload */
+[type="file"] {
+  width: 100%;
+  height: 3rem;
+  padding: 6px 10px;
+  margin-bottom: 0.8em;
+  border: 1px solid #777;
+  border-radius: 5px;
+  font-size: 14px;
+  float: right;
+  clear: both;
+}
+
+/* Border color is blue when input field is selected */
+input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+/* File upload button*/
+input::file-selector-button {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0.7em 1em;
+}
+
+/* Create account submit button */
+.signup input[type="submit"] {
+  min-width: 150px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 50%;
+  display: inline-block;
+  margin: 1.5em 25% 1em 25%;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0 4px 8px 0 var(--boxshadow-color);
+  background-color: #04334b;
+}
+
+/* Prompts for not registered and create an account are positioned */
+.not {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 14px;
+}
+.tab {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+/* Page specific media queries */
+
+/* Changes input fiels when screen is resized */
+@media only screen and (max-width: 768px) {
+  .signup {
+    min-width: 25em;
+    margin: 1em 35% 10em 25%;
+  }
+
+  input[type="text"],
+  [type="password"],
+  [id="username"],
+  [type="email"],
+  [type="tel"],
+  [type="file"] {
+    width: 100%;
+  }
+  .signup input[type="submit"] {
+    width: 80%;
+    margin: 1em 10% 1em 10%;
+  }
+}
+
+/* Changes input fields when screen is resized */
+@media only screen and (max-width: 600px) {
+  .signup {
+    min-width: auto;
+    max-width: 80%;
+    margin: 1em 10% 10em 10%;
+  }
+}

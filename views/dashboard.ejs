@@ -1,0 +1,117 @@
+<!-- Orange pattern behind nav bar -->
+<img src="/images/nav-background1.svg" class="nav_background" alt="Navigation background" />
+
+
+<!-- RECEIVED TRADE REQUESTS -->
+<h2 class="first_dashboard_heading">Received Trade Requests</h2>
+
+<!-- No trade requests -->
+<% if(pageData.receivedTrades.length == 0) { %>
+<h3 class="empty_message">You haven't received any trade requests yet</h3>
+
+<% } else { %>
+<!-- List of received trade requests -->
+<ul class="cardlist">
+  <% for(trade of pageData.receivedTrades) { %>
+
+  <!-- Game Information card-->
+  <article id="<%=trade.id %>" class="card game clickable" onclick="viewTradeInfo(<%=trade.id %>)">
+    <!-- Image -->
+    <img src="<%=game.photo %>" class="request_thumbnail" />
+    <div class="card_container">
+      <!-- Request Message -->
+      <p class="request"><button class="card user"> <%=trade.initiator_username %></button> wants to trade
+      <h3 class="request"><%=trade.initiator_game_name %></h3>
+      </p>
+      <p class="request">in exchange for
+      <p class="italic"><%=trade.receiver_game_name %></p>
+      </p>
+      <!-- Request Button -->
+      <button class="card button request" onclick="viewTradeInfo(<%=trade.id %>)">
+        View Request
+      </button>
+    </div>
+  </article>
+  <% } %>
+</ul>
+<% } %>
+
+
+<!-- MY POSTED GAMES -->
+<h2 class="dashboard_heading">My Posted Games</h2>
+
+<!-- No posted games -->
+<% if(pageData.postedGames.length == 0) { %>
+<h3 class="empty_message">You haven't posted any games yet</h3>
+
+<% } else { %>
+<!-- List of my posted games -->
+<ul class="cardlist">
+  <% for(game of pageData.postedGames) { %>
+
+  <!-- Game Information card-->
+  <article id="<%=game.id %>" class="card game clickable" onclick="viewGameInfo(<%=game.id %>)">
+    <!-- Image -->
+    <img src="<%=game.photo %>" class="thumbnail" />
+    <div class="card_container">
+      <!-- Title -->
+      <h3><%=game.name %></h3>
+      <!-- Genre -->
+      <button class="card genre">Genre: <%=game.genre %></button>
+      <button class="card button" onclick="viewGameInfo(<%=game.id %>)">
+        More information
+      </button>
+    </div>
+  </article>
+  <% } %>
+</ul>
+<% } %>
+
+
+<!-- LIST OF SAMPLE GAMES -->
+<h2 class="dashboard_heading">Games Posted by Other Users</h2>
+<ul class="cardlist">
+  <% for(game of pageData.sampleGames) { %>
+
+  <!-- Game Information card-->
+  <article id="<%=game.id %>" class="card game clickable" onclick="viewGameInfo(<%=game.id %>)">
+    <!-- Image -->
+    <img src="<%=game.photo %>" class="thumbnail" />
+    <div class="card_container">
+      <!-- Title -->
+      <h3><%=game.name %></h3>
+      <!-- Genre -->
+      <button class="card genre">Genre: <%=game.genre %></button>
+      <p><%=game.posted_by_user %></p>
+      <button class="card button" onclick="viewGameInfo(<%=game.id %>)">
+        More information
+      </button>
+    </div>
+  </article>
+  <% } %>
+</ul>
+
+<!-- Instructions for posting and trading games -->
+<div class="headings">
+  <h2>Rules</h2>
+</div>
+<section class="dashboard_rules">
+  <div class="column">
+    <img src="images/boardgame9.jpeg" class="rule" alt="boardgame" />
+    <p class="rule">Organize the trade with the other member of All-A-Board.</p>
+  </div>
+  <div class="column">
+    <img src="images/postbox.jpeg" class="rule" alt="post box" />
+    <p class="rule">Post your old boardgame.</p>
+  </div>
+  <div class="column">
+    <img src="images/parcel.jpeg" class="rule" alt="parcel received" />
+    <p class="rule">
+      Wait for 1-2 days for arrival. <br />Enjoy playing the boardgame of your
+      choice.
+    </p>
+  </div>
+</section>
+
+<!-- Orange pattern behind footer -->
+<img src="/images/footer-background.svg" class="footer_background" alt="footer_background" />

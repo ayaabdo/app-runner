@@ -1,0 +1,288 @@
+/*
+ * Common CSS Styles
+ *
+ * These are styles that are common to all pages. Modify with care.
+ */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/*
+  Font Style for the text common to all pages
+*/
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Mogra&family=Roboto:wght@300;400;500&display=swap");
+
+/*
+  root scope contains the global variables for the main colors 
+  used in the website for buttons and text and also contains 
+  global variable of max-width of the website 
+ */
+:root {
+  --primary-color: #0a4461;
+  --secondary-color: #810937;
+  --tertiary-color: #333333;
+  --light-color: #ffffff;
+  --dark-color: #f9f9f9;
+  --max-width: 1500px;
+  --card-color: #ffbb5a;
+  --filter-color: #ffce2c;
+  --profile-color: #000000;
+  --proback-color: #e5e5e5;
+  --camera-color: #c4c4c4;
+  --error-color: #ff0000;
+  --boxshadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* 
+  CSS reset set all the elements on the page 
+  so they look same in all the browsers
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+  Using overflow-x we are clipping the content
+  on the page on the x-axis 
+*/
+html {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/* 
+  Main body tag with font,line-height and 
+  background-color specified 
+*/
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  background: var(--light-color); /* used the global variable */
+}
+
+/* 
+  Link tag with color specified and 
+  text-decoration set to none 
+*/
+a {
+  color: var(--tertiary-color); /* used the global variable */
+  text-decoration: none;
+}
+
+/* 
+  un-ordered list tag set the list-style to none  
+*/
+ul {
+  list-style: none;
+}
+
+/* 
+  image tag is set in width to 100% so image resize
+  in width as the browser is resized
+*/
+img {
+  width: 100%;
+}
+img[alt]{
+	font-size:12px;
+}
+
+/* 
+  All the headding tags have their specified margin at 
+  the bottom and line-height.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 9px;
+  line-height: 1.8;
+}
+
+/* 
+  Error text styling 
+*/
+.error {
+  color: var(--error-color);
+  font-size: 0.9em;
+  margin-top: 1rem;
+}
+
+/*
+  Footer bar styling.Uses flex-shrink 
+  to prevent the footer from being squashed 
+  by the main tag's flex grow setting
+*/
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-shrink: 0;
+  width: 100%;
+  height: 150px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+/*
+  Social media icons appearing using Fontawesome 
+  are inside the i tag,the color and the margins 
+  of the icons are specified .
+*/
+i {
+  color: var(--light-color);
+  margin-left: 5px;
+}
+h3 {
+  font-family: "Mogra", cursive;
+}
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+/*
+  Main page content styling
+
+  Uses flexbox to automatically grow the section 
+  to fill the available space
+*/
+main {
+  flex: 1 0 auto;
+  padding: 0.5rem;
+}
+
+/* 
+  Common Navigation bar styling. Flex is used for responsiveness.
+*/
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 var(--boxshadow-color);
+  background-color: var(--light-color);
+}
+
+/* 
+Logo in the navigation 
+*/
+nav h1 {
+  color: var(--secondary-color);
+  font-family: "Mogra", cursive;
+  margin: 20px;
+  font-size: 24px;
+}
+
+/* 
+  Other links like Browse games , Sign In ,
+  Dashboard etc styling is specified 
+*/
+nav ul li {
+  display: inline;
+  margin: 0 50px 0 10px;
+  font-size: 16px;
+}
+
+/* 
+  Button class to be used in the common navigation bar 
+ */
+.btn {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 10px 20px 10px 20px;
+  font-size: 16px;
+}
+.btn:hover {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+}
+
+/* Basic style for all cards, no dimensions */
+.card {
+  background: var(--dark-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 #e0e0e0;
+}
+
+/*
+  Dimensions for game information cards
+  Use both card and game classes to define game information 
+  cards, which will apply correct sizing to them
+*/
+.card.game {
+  height: 24rem;
+  text-align: left;
+  width: 18rem;
+  margin: 0em 1.5em 2em 0;
+}
+
+/* Padding between text and card */
+.card.game h3 {
+  padding: 0em 0em 0em 1em;
+  margin-bottom: 0em;
+}
+
+/*
+  Card list container style
+  Displays elements in rows which wrap automatically when 
+  the container is resized
+*/
+.cardlist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+/*
+  Style for clickable elements
+  Provides visual cues for clickable elements 
+  when the user hovers the mouse over them
+*/
+.clickable:hover {
+  box-shadow: 0 8px 16px 0 #e0e0e0;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: transform 0.2s;
+}
+
+/* Game card thumbnail */
+.thumbnail {
+  height: 14rem;
+  width: 18rem;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+/* Genre button tag */
+.card.genre {
+  padding: .3em .7em .3em .7em;
+  margin: 0em 0em .9em 1.3em;
+  border-radius: 10px;
+  border: none;
+  background-color: #8f8f8f33;
+  box-shadow: none;
+}
+
+/* Game card button */
+.card.button {
+  font-family: "Roboto", sans-serif;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 12px 20px 12px 20px;
+  margin-top: 1em;
+  margin-left: 3.8em;
+  font-size: 1em;
+}
+
+.card.button:hover {
+  cursor: pointer;
+  background-color: #740932;
+}

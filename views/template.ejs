@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>All A-Board</title>
+
+  <!-- Common CSS styles -->
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Page-specific CSS styles -->
+    <link href="/stylesheets/<%=partial %>.css" rel="stylesheet" type="text/css">
+    
+    <!--Media Queries-->
+    <link rel="stylesheet" href="/stylesheets/media.css" />
+    
+    <!--Carousel CSS style-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    
+    <!-- Common page functions -->
+    <script src="/javascripts/common.js"></script>
+
+    <!-- Page-specific js file -->
+    <script src="/javascripts/<%=partial %>.js"></script>
+  </head>
+  <body>
+    <!-- Common page header -->
+    <%- include("navbar"); %>
+
+    <!-- Page-specific body -->
+    <main>
+    <%- include(partial); %>
+    </main>
+
+    <!-- Common page footer -->
+    <%- include("footer"); %>
+
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<div class="signup_background"></div>
+<!-- Account creation form -->
+<form class="signup" action="/createAccount" method="POST" enctype="multipart/form-data">
+  <!--Heading-->
+  <h3 class="heading">Create Account</h3>
+
+  <!-- "pattern=" adapted from: https://www.w3schools.com/tags/att_input_pattern.asp and https://html.com/attributes/input-pattern/ -->
+  <!-- setCustomValidity from: https://stackoverflow.com/questions/5272433/html5-form-required-attribute-set-custom-validation-message -->
+  <!-- First Name -->
+  <div class="input_field">
+    <label for="first_name" class="required">First Name:</label>
+    <input
+      type="text"
+      name="first_name"
+      id="first_name"
+      value=""
+      pattern="[A-Za-z-\s]{1,99}"
+      oninvalid="this.setCustomValidity('Please enter your first name')"
+      oninput="this.setCustomValidity('')"
+      required
+    />
+  </div>
+
+  <!-- Last Name -->
+  <div class="input_field">
+    <label for="last_name" class="required">Last Name:</label>
+    <input
+      type="text"
+      name="last_name"
+      id="last_name"
+      value=""
+      pattern="[A-Za-z-\s]{1,99}"
+      oninvalid="this.setCustomValidity('Please enter your last name')"
+      oninput="this.setCustomValidity('')"
+      required
+    />
+  </div>
+
+  <!-- Email Address -->
+  <div class="input_field">
+    <label for="email_address" class="required">Email Address:</label>
+    <input
+      type="email"
+      name="email_address"
+      id="email_address"
+      placeholder="test@example.com"
+      value=""
+      oninvalid="this.setCustomValidity('Please enter a valid email address')"
+      oninput="this.setCustomValidity('')"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+      required
+    />
+  </div>
+
+  <!-- Phone Number -->
+  <div class="input_field">
+    <label for="phone" class="required">Phone Number:</label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      placeholder="0123456789"
+      pattern="[0-9]{10}"
+      maxlength="10"
+      value=""
+      oninvalid="this.setCustomValidity('Please enter a valid phone number (10 digits)')"
+      oninput="this.setCustomValidity('')"
+      required
+    />
+  </div>
+
+  <!-- Address -->
+  <div class="input_field">
+    <label for="address" class="required">Address:</label>
+    <input
+      type="text"
+      name="address"
+      id="address"
+      placeholder="Address 123"
+      value=""
+      pattern="[a-zA-Z0-9,\s]{4,99}"
+      oninvalid="this.setCustomValidity('Please enter your address')"
+      oninput="this.setCustomValidity('')"
+      required
+    />
+  </div>
+
+  <!-- Username -->
+  <div class="input_field">
+    <label for="username" class="required">Username:</label>
+    <input
+      type="text"
+      name="username"
+      id="username"
+      value=""
+      pattern="[a-zA-Z][a-zA-Z0-9]{1,20}"
+      oninvalid="this.setCustomValidity('Use letters and numbers only')"
+      oninput="this.setCustomValidity('')"
+      required
+    />
+  </div>
+
+  <!-- Password -->
+  <!-- "title and pattern from: https://www.w3schools.com/tags/att_input_pattern.asp -->
+  <div class="input_field">
+    <label for="password" class="required">Password:</label>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      value=""
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      oninvalid="this.setCustomValidity('Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters')"
+      required
+    />
+  </div>
+
+  <!-- Confirm Password -->
+  <div class="input_field">
+    <label for="password_confirmation" class="required"
+      >Confirm Password:</label
+    >
+    <input
+      type="password"
+      name="password_confirmation"
+      id="password_confirmation"
+      value=""
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      oninput="checkPasswordsMatch(this)"
+      required
+    />
+  </div>
+
+  <!-- Upload Profile Picture -->
+  <!-- File code from: https://www.w3schools.com/howto/howto_html_file_upload_button.asp -->
+  <div class="input_field">
+    <label for="file">Profile Picture:</label>
+    <input type="file" name="photo" id="photo" />
+  </div>
+
+  <!-- Create button -->
+  <input type="submit" value="Create Account" />
+
+  <!-- Error message -->
+  <% if(pageData.message) { %>
+    <span class="error"><%=pageData.message %></span>
+  <% } %>
+  
+  <!--Already registered, sign in link-->
+  <p class="not">
+    Already have an account?<span class="tab"></span>
+    <a href="/login"><b>Sign in</b></a>
+  </p>
+</form>

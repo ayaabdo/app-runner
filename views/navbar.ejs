@@ -1,0 +1,42 @@
+<nav>
+	<!--
+		<h2>Common navbar goes here</h2>
+		<p>Navbar: Add your styling, but keep the links and their EJS conditions so that the display logic still works</p>
+	-->
+		
+	<!-- Logo is always displayed.-->
+	<div>
+		<h1>All A-Board</h1>
+	</div>
+	<!--For accessibity purposes role of the un-ordered list is defined-->
+	<ul aria-label="navigation links">
+		<!-- Dashboard is only displayed when logged in -->
+		<% if(sessionInfo.isAuthenticated) { %>
+
+		<li><a href="/dashboard">Dashboard</a></li>
+
+		<% } %>
+
+		<li><a href="/">Home</a></li>
+		<!-- Games is always displayed -->
+		
+		<li><a href="/games">Browse Games</a></li>
+		
+		<!-- Some links that are only displayed when logged in -->
+		<% if(sessionInfo.isAuthenticated) { %>
+
+		<a href="/postgame">Post a Game</a>
+
+		<a href="/profile">Profile (<%=sessionInfo.username %>)</a>
+		
+		<a href="/logout">Logout</a>
+
+		<% } else { %>
+
+		<li><a class="btn" href="/account" aria-label="button for signing up">Sign up</a></li>
+		<!-- Login is only displayed when logged out -->
+		<li><a href="/login">Sign in</a></li>
+
+		<% } %>
+	</ul>
+</nav>

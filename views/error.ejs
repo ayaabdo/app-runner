@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Oops!</title>
+		<link rel="stylesheet" href="/stylesheets/error.css" />
+	</head>
+	<body>
+		<h1>Oops, an error occurred!</h1>
+		<article>
+			<section>
+				<p>Sadly, an error occured while you were trying to access the page.</p>
+				<p>Kindly report the following error to the team and someone will try to help as soon as possible:</p>
+				<div class="errorbox">
+					<label>URL:</label>
+					<strong><%= requested_url %></strong>
+					<label>Message: </label>
+					<strong><%= message %></strong>
+				</div>
+				<a href="/">Click here to go back to the Home page</a>
+			</section>
+			<img src="/images/error.jpg" />
+		</article>
+		<hr>
+		<article>
+			<section>
+				<h2>Stack Trace</h2>
+				<pre><%= error.stack %></pre>
+			</section>
+		</article>
+	</body>
+</html>

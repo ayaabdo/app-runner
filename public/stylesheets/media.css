@@ -1,0 +1,1631 @@
+/*------- Media Queries with max-width 768px ---------*/
+@media only screen and (max-width: 768px) {
+    /*
+        Common Navigation
+    */
+    nav{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        margin:auto;
+    }
+    nav h1{
+        font-family:'Mogra', cursive;
+        margin:20px ; 
+        font-size:18px;
+        
+    }
+    nav ul li{
+        display:inline;
+        margin:0 15px 0 10px;
+        font-size:12px;
+    }
+    .btn{
+        border-radius:10px;
+        padding:5px 8px 5px 8px;
+        font-size:12px;
+    } 
+    /*
+        Hero Section
+    */   
+    #hero{
+        background-image: url('/images/hero.jpeg') ;
+        background-repeat:no-repeat;
+        background-position: left top;
+        background-size: 100%;
+        width:100%;
+        height:20%;
+        position:relative;
+    }
+    .hero h2 ,.hero p{
+        position:absolute;
+        display:flex;
+        flex-wrap:wrap;
+        width:30%;
+    }
+    .hero h2{ 
+        top:10%;
+        left:5%;
+        font-family:'Mogra', cursive;
+        font-size:15px;
+        margin-bottom:15px;
+        padding:10px;
+        color:var(--secondary-color);
+    }
+    .hero p{
+        top:20%;
+        left:5%;
+        font-size:12px;
+        margin-top:15px;
+        padding:10px;
+    }
+    /*
+     Headings of different sections on Home page
+    */
+    .headings h2{
+        border: 2px solid var(--filter-color);
+        border-radius:10px;
+        margin:120px 50px 50px 50px;
+        background-color:var(--filter-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: var(--profile-color);
+    } 
+    /*
+        Rules Section
+    */
+    .container{
+        display:grid;
+        grid-template-columns: 4fr 4fr 4fr;
+        grid-gap:1.5rem;
+        margin:50px 35px 50px 35px;
+        padding:5px;
+        text-align:left;
+        font-size:12px;
+    }
+    .container .rule{
+        grid-gap:5px;
+        margin-bottom:20px; 
+    }
+    .container .rule img{
+        grid-gap:2px;
+        width:100%;
+        height:100%;  
+    }
+    /*
+        Carousels in the games on offer and 
+        review section
+    */
+    .swiper {
+        width: 85%;
+        height: 200px;
+        margin:10px;
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        background-color:var(--light-color);
+    }
+      
+    /*---------------------------Sign In page ------------------------------------*/
+    .signin-form{
+        background-image:url("/images/Group109.svg");
+        background-repeat:no-repeat;
+        background-position: 50% 10%;
+        background-size:100%;
+        width:100%;
+        height:90vh;
+    }
+    .signin{
+        display:block;
+        background:var(--light-color);
+        width:300px;
+        height:600px;
+        margin:30px auto auto auto;
+        border:1px solid var(--tertiary-color);
+        border-radius: 20px;
+        box-shadow:0px 3px 3px var(--boxshadow-color);
+        padding:10px 20px 10px 20px;
+    }
+    label{
+        font-size:12px;
+    }
+    #username{
+        width:100%;
+        height:40px;
+        margin-left:0px;
+        border:1px solid var(--tertiary-color);
+        border-radius:5px;
+    }
+    #password{
+        width:100%;
+        height:40px;
+        margin-left:0px;
+        border:1px solid var(--tertiary-color);
+        border-radius:5px;
+    }
+    .remember{
+        font-size:10px;
+    }
+    #checkbox{
+        width:15px;
+    }
+    sub{
+        text-align:right;
+        font-size:10px;
+    }
+    .not{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        gap:5px;
+        font-size:10px;
+        margin-top:15px;
+    }
+    .big-btn{
+        width:150px;
+        height:40px;
+        margin:0 10px 0 50px;
+        background-color:var(--primary-color);
+        color:#fff;
+        border:2px solid var(--primary-color);
+        border-radius:10px;
+    }
+    /*---------- Post your game----------------*/
+    /*
+    Background image
+    */
+    .postgame-form{
+        background-image:url("/images/Group101.svg");
+        background-repeat:no-repeat;
+        background-position: 50% 10%;
+        background-size:100%;
+        width:100%;
+        height:90vh;
+    }
+    /*
+    Div for post your game form
+    */
+    .postgame{
+        display:block;
+        background:var(--light-color);
+        width:400px;
+        height:800px;
+        margin:30px 80% 30px 20%;
+        border:1px solid var(--tertiary-color);
+        border-radius: 20px;
+        box-shadow:3px 3px 3px var(--boxshadow-color);
+        padding:80px 50px 80px 50px;
+    }
+    /*
+    Labels for all the input fields
+    */
+    label{
+        font-size:12px;
+    }
+    /*
+    Input fields
+    */
+    .postgame input{
+        width:100%;
+        height: 40px;
+        margin:10px 0 10px 0;
+        border: 1px solid var(--tertiary-color);
+        border-radius:5px;
+    }
+    /*
+    Post and cancel buttons
+    */
+    #cancel{
+        float:left;
+        width:100px;
+        border:1px solid var(--tertiary-color);
+        background-color:var(--light-color);
+        border-radius: 20px;
+    }
+    #post{
+        float :right;
+        width:100px;
+        background-color:var(--primary-color);
+        color:var(--light-color);
+        border-radius: 20px;
+    }
+    /*
+    Game description text area 
+    */
+    #description{
+        width:100%;
+        height:80px;
+        padding:5px;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5em;
+        border:1px solid var(--tertiary-color);
+        border-radius:10px;
+    }
+    /*
+    File upload
+    */
+    #upload-photo{
+        padding:2px;
+        height:30px;
+        width:220px;
+    }
+    /* 
+    Pseudo element representing the input type file 
+    */
+    input::file-selector-button {
+        color:var(--light-color);
+        font-size:10px;
+        padding:3px 10px 3px 10px;
+        border: 1px solid var(--boxshadow-color);
+        border-radius:8px;
+        margin:2px 10px 2px 10px;
+        background:var(--secondary-color);
+    }
+   /*--------------------------*/
+   /*-------------------Game Info page-----------------------*/
+    /*---Main game information container----*/
+    .gameinfo-container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        width:100%;
+        height:100vh;
+        margin:auto;
+        border:none;
+    }
+    /*---div containing both image and game info card----*/
+    #gameinfo{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        border-radius:20px ;
+        margin:20px 50px 50px 50px;
+    }
+    /*---Image of the game----*/
+    .photo{
+        width:300px;
+        height:310px;
+        margin-top:10px;
+        border-radius:20px;
+    }
+    /*---Card with the game description and posted by---*/
+    .gameimginfo{
+        display:flex;
+        flex-direction:row;
+        align-items:flex-start;
+        justify-content:center;
+        width:100%;
+        height:100%;
+        border-radius:20px;    
+    }
+    /*----Game information card---*/
+    .gameinfo-card{
+        width:50%;
+        height:20%;
+        margin:50px 10px 0 10px;
+    }
+    /*---Input text area----*/
+    input{
+        width:100%;
+        height:40px;
+        border:2px solid #eee;
+        border-radius:5px;
+    }
+    /*----Individual input area margins---*/
+    #gamename , #genre , #condition ,#players{
+        margin:0px 50px 10px 0px;
+    }
+    /*---Description of the game----*/
+    #description{
+        width:200%;
+        height:100px;
+        padding:5px;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5em;
+        border:2px solid #eee;
+        border-radius:10px;
+    }
+    /*---Posted by card----*/
+    .posted_by_user{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:center;
+        padding:60px 10px 20px 10px;
+        border:2px solid #eee;
+        border-radius:10px;
+        width:40%;
+        height:50%;
+        margin:70px 30px 50px 20px;
+    }
+    /*---Individual input text area in postedby card----*/
+    #customername , #rate {
+        width:80%;
+        min-height:20%;
+    }
+    /*---Heading of the more games section----*/
+    .heading{
+    text-align :center;
+    margin:10px;
+    }
+    /*---Container for carousel--------*/
+    .main-container{
+        max-width:1100px;
+        height:100%;
+        margin:auto;
+    }
+    /*------Swiper carousel more information div-------*/
+    .swiper-slide .moreinfo{
+        text-align:center;
+        font-size:12px;
+        width:100%;
+        height:30px;
+        padding-top:5px;
+    }
+    /*---Ad section main container----*/
+    #ad{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        margin:100px;
+    }
+    /*---ad section alignment with flex ----*/
+    .ad{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        gap:1em;
+        padding:10px;
+        border:2px solid #333;
+        margin:20px;
+    }
+    /*---ad section image ----*/
+    .ad img{
+        width:80px;
+        height:80px;
+    }
+    /*---ad section close sign ----*/
+    .ad sub{
+        padding:5px;
+        border:2px solid #333;
+    }
+    /*-------------------------------------------------------*/
+    
+}
+
+/*------- Media Queries with max-width 600px ---------*/
+
+@media only screen and (max-width: 600px) {
+    .btn{
+        border: 2px solid var(--primary-color);
+        border-radius:10px;
+        background-color:var(--primary-color);
+        color:var(--light-color);
+        padding:5px 8px 5px 8px;
+        font-size:10px;
+    }  
+    /*
+        Common Navigation
+    */ 
+    nav{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        margin:auto;
+        box-shadow: 0 4px 8px 0 var(--boxshadow-color);
+        background-color: var(--light-color);
+    }
+    nav h1{
+        color:var(--secondary-color);
+        font-family:'Mogra', cursive;
+        margin:10px 10px 10px 10px; 
+        font-size:11px;
+        
+    }
+    nav ul li{
+        display:inline;
+        margin:0 3px 0 3px;
+        font-size:10px;
+    }
+    /*
+        Hero Section
+    */
+    #hero{
+        width:100%;
+        height:100%; 
+        margin:auto; 
+        position:relative;
+    }
+    .hero h2 ,.hero p{
+        position:absolute;
+        display:flex;
+        flex-wrap:wrap;
+        width:35%;
+    }
+    .hero h2{ 
+        top:1%;
+        left:5%;
+        margin-bottom:15px;
+        font-family:'Mogra', cursive;
+        color:var(--secondary-color);
+        padding:10px;
+    }
+    .hero p{
+        top:8%;
+        left:5%;
+        font-size:10px;
+        margin-top:25px;
+    }
+    /*
+     Headings of different sections on Home page
+    */
+    .headings h2{
+        border: 2px solid var(--filter-color);
+        border-radius:10px;
+        margin:120px 50px 50px 50px;
+        background-color:var(--filter-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: var(--profile-color);
+    } 
+    /*
+        Rules Section
+    */
+    #rules{
+        width:100%;
+        height:220px;  
+    }
+    .container{
+        display:grid;
+        grid-template-columns: 4fr 4fr 4fr;
+        grid-gap:1.5rem;
+        margin:50px 40px 50px 40px;
+        padding:5px;
+        text-align:left;
+        font-size:12px;
+    }
+    .container .rule{
+        grid-gap:5px;
+        margin-bottom:20px;
+        
+    }
+    .container .rule img{
+        grid-gap:2px;
+        width:100%;
+        height:100%;  
+    }
+    /*
+        Carousels in the games on offer and 
+        review section
+    */
+    .swiper {
+        width: 85%;
+        height: 150px;
+        margin:10px;
+        
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        background-color:var(--light-color);
+    }
+    /*
+        Review Section
+    */
+    .reviews .sm-img img{
+        width:50px;
+        height:50px;
+        border:2px solid var(--boxshadow-color);
+        border-radius:20%;
+        align-items:center;
+        justify-content:center;
+         
+    }
+    .reviews .comments{
+        width:50%;
+        height:70%;
+        align-items:center;
+        justify-content:center; 
+        font-size:10px; 
+        padding:20px;
+        margin-top:20px;
+    }
+    .reviews  sub{
+        font-size:9px;
+    }
+      
+    /*-----------------------Sign In page -----------------------------------*/ 
+    .signin-form{
+        background-image:url("/images/Group109.svg");
+        background-repeat:no-repeat;
+        background-position: 50% 10%;
+        background-size:100%;
+        width:100%;
+        height:95vh;
+    }
+    .signin{
+        display:block;
+        background:var(--light-color);
+        width:250px;
+        height:400px;
+        margin: 10px auto;
+        border:1px solid var(--tertiary-color);
+        border-radius: 20px;
+        box-shadow:0px 3px 3px var(--boxshadow-color);
+        padding:10px 15px 80px 15px;
+    }
+
+    .label{
+        font-family: 'Roboto', sans-serif;
+    }
+    .label{
+        font-size:12px;
+    }
+    /*
+        Text field styling of username and password
+    */
+    #username{
+        width:100%;
+        height:40px;
+        margin-left:0px;
+        border:1px solid var(--tertiary-color);
+        border-radius:5px;
+    }
+    #password{
+        width:100%;
+        height:40px;
+        margin-left:0px;
+        border:1px solid var(--tertiary-color);
+        border-radius:5px;
+    }
+    #checkbox-field{
+        display:inline-block;
+        position:relative;
+        margin:bottom;
+    }
+    #checkbox-field .remember{
+        position:absolute;
+        top:12px;
+        font-size:10px;
+    }
+    #checkbox-field #checkbox{
+        width:15px;
+    }
+    sub{
+        text-align:right;
+        font-size:10px;
+    }
+    .big-btn{
+        width:150px;
+        height:30px;
+        margin:0 10px 0 40px;
+        background-color:var(--primary-color);
+        color:var(--light-color);
+        border:2px solid var(--primary-color);
+        border-radius:10px;
+    }
+    .not{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        gap:5px;
+        font-size:10px;
+        margin-top:15px;
+    }
+    /*---------------Post Your game-------------------*/
+    /*
+    Background image
+    */
+    .postgame-form{
+        background-image:url("/images/Group101.svg");
+        background-repeat:no-repeat;
+        background-position: 50% 10%;
+        background-size:100%;
+        width:100%;
+        height:90vh;
+    }
+    /*
+    Div for post your game form
+    */
+    .postgame{
+        display:block;
+        background:var(--light-color);
+        width:300px;
+        height:750px;
+        margin:30px 80% 30px 20%;
+        border:1px solid var(--tertiary-color);
+        border-radius: 20px;
+        box-shadow:3px 3px 3px var(--boxshadow-color);
+        padding:50px 30px 80px 30px;
+    }
+    /*
+    Labels for all the input fields
+    */
+    label{
+        font-size:12px;
+    }
+    /*
+    Input fields
+    */
+    .postgame input{
+        width:100%;
+        height: 40px;
+        margin:10px 0 10px 0;
+        border: 1px solid var(--tertiary-color);
+        border-radius:5px;
+    }
+    /*
+    Post and cancel buttons
+    */
+    #cancel{
+        float:left;
+        width:80px;
+        border:1px solid var(--tertiary-color);
+        background-color:var(--light-color);
+        border-radius: 20px;
+    }
+    #post{
+        float :right;
+        width:80px;
+        background-color:var(--primary-color);
+        color:var(--light-color);
+        border-radius: 20px;
+    }
+    /*
+    Game description text area 
+    */
+    #description{
+        width:90%;
+        height:80px;
+        padding:5px;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5em;
+        border:1px solid var(--tertiary-color);
+        border-radius:10px;
+    }
+    /*
+    File upload
+    */
+    #upload-photo{
+        padding:2px;
+        height:32px;
+    }
+    /* 
+    Pseudo element representing the input type file 
+    */
+    input::file-selector-button {
+        color: #fff;
+        font-size:10px;
+        padding:3px 10px 3px 10px;
+        border: 1px solid var(--boxshadow-color);
+        border-radius:8px;
+        margin-right:20px;
+        background:var(--secondary-color);
+    }
+    /*----------------------------------*/
+    /*-------------------Game Info page-----------------------*/
+    /*---Main game information container----*/
+    .gameinfo-container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        width:100%;
+        height:100vh;
+        margin:50px 0 50px 0;
+    }
+    /*---div containing both image and game info card----*/
+    #gameinfo{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        margin:20px 50px 20px 50px;
+        border-radius:20px;
+    }
+    /*---Image of the game----*/
+    .photo{
+        width:200px;
+        height:200px;
+        margin:10px 10px;
+        border-radius:20px;
+    }
+    /*---Card with the game description and posted by---*/
+    .gameimginfo{
+        display:flex;
+        flex-direction:row;
+        align-items:flex-start;
+        justify-content:center;
+        width:100%;
+        height:100%;    
+    }
+    /*----Game information card---*/
+    .gameinfo-card{
+        width:60%;
+        height:20%;
+        margin:50px 20px 0 20px;
+    }
+    /*---Input text area----*/
+    input{
+        width:100%;
+        height:40px;
+        border-radius:5px;
+    }
+    /*----Individual input area margins---*/
+    #gamename , #genre , #condition ,#players{
+        margin:0px 50px 10px 0px;
+    }
+    /*---Description of the game----*/
+    #description{
+        width:200%;
+        height:100px;
+        padding:5px;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5em;
+        border-radius:10px;
+    }
+    /*---Posted by card----*/
+    .posted_by_user{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:center;
+        padding:60px 20px 20px 20px;
+        border-radius:10px;
+        width:60%;
+        height:50%;
+        margin:70px 20px 50px 20px;
+    }
+    .posted_by_user p{
+        font-size:13px;
+    }
+    /*---Individual input text area in postedby card----*/
+    #customername , #rate {
+        width:100%;
+        min-height:20%;
+    }
+    /*---Heading of the more games section----*/
+    .heading{
+        text-align :center;
+        margin:10px;
+    }
+    /*---Container for carousel--------*/
+    .main-container{
+        max-width:1100px;
+        height:100%;
+        margin:auto;
+
+    }
+    /*------Swiper carousel more information div-------*/
+    .swiper-slide .moreinfo{
+        text-align:center;
+        background-color:var(--secondary-color);
+        color:var(--light-color);
+        font-size:12px;
+        width:100%;
+        height:30px;
+        padding-top:5px;
+    }
+    /*---Ad section main container----*/
+    #ad{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        margin:100px;
+    }
+    /*---ad section alignment with flex ----*/
+    .ad{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        gap:1em;
+        padding:10px;
+        margin:20px;
+        font-size:12px;
+    }
+    /*---ad section image ----*/
+    .ad img{
+        width:80px;
+        height:80px;
+    }
+    /*---ad section close sign ----*/
+    .ad sub{
+        padding:5px;
+    }
+    /*-------------------------------------------------------*/
+    /*
+        Footer
+    */
+    footer{
+        height:50px;
+    }
+    i{
+        font-size:12px;
+    }
+    h3{
+        font-family:'Mogra', cursive; 
+        font-size:14px; 
+        margin-top:10px;
+    }
+    h4{
+        font-family: 'Roboto', sans-serif;
+        font-size:10px;
+        margin-top:10px;
+    }
+   
+}
+
+/*------- Media Queries with max-width 414px ---------*/
+@media only screen and (max-width: 414px) {
+    /*
+        Common Navigation
+    */
+    nav{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        margin:auto;
+        box-shadow: 0 4px 8px 0 var(--boxshadow-color);
+        background-color: var(--light-color);
+    }
+    nav h1{
+        color:var(--secondary-color);
+        font-family:'Mogra', cursive;
+        margin:10px 10px 10px 10px; 
+        font-size:12px;
+        
+    }
+    nav ul li{
+        display:inline;
+        margin:0 3px 0 3px;
+        font-size:9px;
+    }
+    .btn{
+        border: 2px solid var(--primary-color);
+        border-radius:10px;
+        background-color:var(--primary-color);
+        color:var(--light-color);
+        padding:5px 8px 5px 8px;
+        font-size:10px;
+    }  
+    /*
+     Hero Section 
+    */ 
+    #hero{
+        width:100%;
+        height:100%; 
+        margin:auto; 
+        position:relative;
+    }
+    .hero h2 ,.hero p{
+        position:absolute;
+        display:flex;
+        flex-wrap:wrap;
+        width:35%;
+    }
+    .hero h2{ 
+        top:1%;
+        left:4%;
+        margin-bottom:15px;
+        font-family:'Mogra', cursive;
+        color:var(--secondary-color);
+        padding:5px;
+        font-size:11px;
+    }
+    .hero p{
+        top:8%;
+        left:3%;
+        font-size:8px;
+        margin-top:15px;
+    }
+    /*
+     Headings of different sections on Home page
+    */
+    .headings h2{
+        border: 2px solid var(--filter-color);
+        border-radius:10px;
+        margin:120px 50px 50px 50px;
+        background-color:var(--filter-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: var(--profile-color);
+    } 
+    /*
+        Rules Section on the Home page
+    */ 
+    #rules{
+        width:100%;
+        height:120px;  
+    }
+    .container{
+        display:grid;
+        grid-template-columns: 4fr 4fr 4fr;
+        grid-gap:1rem;
+        margin:10px 25px 10px 25px;
+        padding:0px;
+        text-align:center;
+        font-size:8px;
+    }
+    .container .rule{
+        grid-gap:5px;
+        margin-bottom:5px;
+        
+    }
+    .container .rule img{
+        grid-gap:2px;
+        width:100%;
+        height:100%;  
+    }
+    /*
+        Carousels in the games on offer and 
+        review section
+    */
+    .swiper {
+        width: 85%;
+        height: 100px;
+        margin:5px;  
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        background-color:var(--light-color);
+    }
+    /*
+        Review section on the Home page
+    */
+    .reviews .sm-img img{
+        width:50px;
+        height:50px;
+        border:2px solid var(--boxshadow-color);
+        border-radius:20%;
+        align-items:center;
+        justify-content:center;  
+    }
+    .reviews .comments{
+        width:40%;
+        height:80%;
+        align-items:center;
+        justify-content:center; 
+        font-size:7px; 
+        padding:5px;
+        margin-top:10px;
+    }
+    .reviews  sub{
+        font-size:7px;
+    }
+  /*---Sign In page ---*/
+   .signin-form{
+        background-image:url("/images/Group109.svg");
+        background-repeat:no-repeat;
+        background-position: 50% 10%;
+        background-size:100%;
+        width:100%;
+        height:95vh;
+    }
+    .signin{
+        display:block;
+        background:var(--light-color);
+        width:250px;
+        height:350px;
+        margin: 10px auto;
+        border:1px solid var(--tertiary-color);
+        border-radius: 20px;
+        box-shadow:0px 3px 3px var(--boxshadow-color);
+        padding:10px 15px 80px 15px;
+    }
+    label{
+        font-size:11px;
+    }
+    #username{
+        width:145px;
+        height:25px;
+        margin-left:10px;
+        border:1px solid var(--tertiary-color);
+        border-radius:5px;
+    }
+    #password{
+        width:145px;
+        height:25px;
+        margin-left:5px;
+        border:1px solid var(--tertiary-color);
+        border-radius:5px;
+    }
+    .remember{
+        font-size:10px;
+    }
+    #checkbox{
+        width:15px;
+    }
+    sub{
+        text-align:right;
+        font-size:10px;
+    }
+    .big-btn{
+        width:150px;
+        height:40px;
+        margin:0 10px 0 40px;
+        background-color:var(--primary-color);
+        color:var(--light-color);
+        border:1px solid var(--primary-color);
+        border-radius:10px;
+    }
+    .not{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        gap:5px;
+        font-size:10px;
+        margin-top:15px;
+    }
+    /*---------------Post Your game-------------------*/
+    /*
+    Background image
+    */
+    .postgame-form{
+        background-image:url("/images/Group101.svg");
+        background-repeat:no-repeat;
+        background-position: 50% 10%;
+        background-size:100%;
+        width:100%;
+        height:90vh;
+    }
+    /*
+    Div for post your game form
+    */
+    .postgame{
+        display:block;
+        background:var(--light-color);
+        width:280px;
+        height:650px;
+        margin:20px 80% 10px 20%;
+        border:1px solid var(--tertiary-color);
+        border-radius: 20px;
+        box-shadow:3px 3px 3px var(--boxshadow-color);
+        padding:15px 50px 15px 50px;
+    }
+    /*
+    Labels for all the input fields
+    */
+    label{
+        font-size:12px;
+    }
+    /*
+    Input fields
+    */
+    .postgame input{
+        width:100%;
+        height: 40px;
+        margin:10px 0 10px 0;
+        border: 1px solid var(--tertiary-color);
+        border-radius:5px;
+    }
+    /*
+    Post and cancel buttons
+    */
+    #cancel{
+        float:left;
+        width:80px;
+        border:1px solid var(--tertiary-color);
+        background-color:var(--light-color);
+        border-radius: 20px;
+    }
+    #post{
+        float :right;
+        width:80px;
+        background-color:var(--primary-color);
+        color:var(--light-color);
+        border-radius: 20px;
+    }
+    /*
+    Game description text area 
+    */
+    #description2{
+        width:100%;
+        height:50px;
+        padding:5px;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5em;
+        border:1px solid var(--tertiary-color);
+        border-radius:10px;
+    }
+    /*
+    File upload
+    */
+    #upload-photo{
+        padding:2px;
+        height:32px;
+        width:185px;
+    }
+    /* 
+    Pseudo element representing the input type file 
+    */
+    input::file-selector-button {
+        color: var(--light-color);
+        font-size:10px;
+        padding:3px 10px 3px 10px;
+        border: 1px solid var(--boxshadow-color);
+        border-radius:8px;
+        margin-right:20px;
+        height:22px;
+        background:var(--secondary-color);
+    }
+    /*----------------------------------*/
+    /*---------Game information Page---------------------*/
+    /*---Main game information container----*/
+    .gameinfo-container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        width:100%;
+        height:100vh;
+        margin:auto;
+    }
+    /*---div containing both image and game info card----*/
+    #gameinfo{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        border-radius:10px;
+        margin:20px 50px 20px 50px;
+    }
+    /*---Image of the game----*/
+    .photo{
+        width:150px;
+        height:150px;
+        margin:10px 10px;
+        border-radius:20px;
+    }
+    /*---Card with the game description and posted by---*/
+    .gameimginfo{
+        display:flex;
+        flex-direction:row;
+        align-items:flex-start;
+        justify-content:center;
+        width:100%;
+        height:100%;    
+    }
+    /*----Game information card---*/
+    .gameinfo-card{
+        width:50%;
+        height:20%;
+        margin:50px 10px 0 10px;
+    }
+    /*---Input text area----*/
+    input{
+        width:100%;
+        height:40px;
+        border-radius:5px;
+    }
+    /*----Individual input area margins---*/
+    #gamename , #genre , #condition ,#players{
+        margin:0px 50px 10px 0px;
+    }
+    /*---Description of the game----*/
+    #description {
+        width:100%;
+        height:100px;
+        padding:5px;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5em;
+        border-radius:10px;
+    }
+    /*---Posted by card----*/
+    .posted_by_user{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:center;
+        padding:60px 20px 20px 20px;
+        border-radius:10px;
+        width:50%;
+        height:40%;
+        margin:70px 30px 50px 20px;
+    }
+    /*---Individual input text area in postedby card----*/
+    #customername , #rate {
+        width:100%;
+        min-height:20%;
+    }
+    /*---Heading of the more games section----*/
+    .heading{
+        font-size:16px;
+        text-align :center;
+        margin:10px;
+    }
+    /*---Container for carousel--------*/
+    .main-container{
+        max-width:1100px;
+        height:100%;
+        margin:auto;
+    }
+    /*------Swiper carousel more information div-------*/
+    .swiper-slide .moreinfo{
+        text-align:center;
+        background-color:var(--secondary-color);
+        color:var(--light-color);
+        font-size:10px;
+        width:100%;
+        height:30px;
+        padding-top:5px;
+    }
+    /*---Ad section main container----*/
+    #ad{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        width:300px;
+        margin-left:60px;
+    }
+    /*---ad section alignment with flex ----*/
+    .ad{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        gap:1em;
+        padding:10px;
+        font-size:12px;
+    }
+    /*---ad section image ----*/
+    .ad img{
+        width:80px;
+        height:80px;
+    }
+    /*---ad section close sign ----*/
+    .ad sub{
+        padding:5px;
+    }
+    /*-------------------------------------------------------*/
+    /*
+        Footer Section
+    */
+    footer{
+        height:50px;
+    }
+    
+    i{
+        font-size:12px;
+    }
+    h3{ 
+        font-size:14px; 
+        margin-top:10px;
+    }
+    h4{
+        font-size:10px;
+        margin-top:10px;
+    }
+    
+}
+
+/*------- Media Queries with max-width 322px ---------*/
+@media only screen and (max-width: 322px) {
+    /*
+     Common Navigation 
+    */  
+    nav{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        margin:auto;
+        box-shadow: 0 4px 8px 0 var(--boxshadow-color);
+        background-color: var(--light-color);
+    }
+    nav h1{
+        color:var(--secondary-color);
+        font-family:'Mogra', cursive;
+        margin:10px 5px 10px 5px; 
+        font-size:10px;
+        
+    }
+    nav ul li{
+        display:inline;
+        margin:0 3px 0 3px;
+        font-size:8px;
+    }
+    .btn{
+        border: 2px solid var(--primary-color);
+        border-radius:10px;
+        background-color:var(--primary-color);
+        color:var(--light-color);
+        padding:5px 5px 5px 5px;
+        font-size:8px;
+    }
+
+    /*
+     Hero Section 
+    */  
+    .hero h2 ,.hero p{
+        position:absolute;
+        display:flex;
+        flex-wrap:wrap;
+        width:60%; 
+    }
+    .hero h2{ 
+        top:1%;
+        left:4%;
+        margin-bottom:15px;
+        font-family:'Mogra', cursive;
+        color:var(--secondary-color);
+        padding:5px;
+        font-size:11px;
+    }
+    .hero p{
+        top:9%;
+        left:3%;
+        font-size:8px;
+        margin-top:15px;
+        background-color:var(--light-color);
+        opacity:0.8;
+    }
+    /*
+     Headings of different sections on Home page
+    */
+    .headings h2{
+        border: 2px solid var(--filter-color);
+        border-radius:10px;
+        margin:80px 20px 50px 20px;
+        background-color:var(--filter-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size:10px;
+        color: var(--profile-color);
+        
+    } 
+     /*---------------Post Your game-------------------*/
+    
+    /*
+    Background image
+    */
+    .postgame-form{
+        background-image:url("/images/Group101.svg");
+        background-repeat:no-repeat;
+        background-position: 50% 10%;
+        background-size:100%;
+        width:100%;
+        height:90vh;
+    }
+    /*
+    Div for post your game form
+    */
+    .postgame{
+        display:block;
+        background:var(--light-color);
+        width:220px;
+        height:600px;
+        margin:30px 20px 30px 50px;
+        border:1px solid var(--tertiary-color);
+        border-radius: 20px;
+        box-shadow:3px 3px 3px var(--boxshadow-color);
+        padding:50px 20px 80px 20px;
+    }
+    /*
+    Labels for all the input fields
+    */
+    label{
+        font-size:10px;
+    }
+    /*
+    Input fields
+    */
+    .postgame input{
+        width:100%;
+        height: 40px;
+        margin:10px 0 10px 0;
+        border: 1px solid var(--tertiary-color);
+        border-radius:5px;
+    }
+    /*
+    Post and cancel buttons
+    */
+    #cancel{
+        float:left;
+        width:60px;
+        border:1px solid var(--boxshadow-color);
+        background-color:var(--light-color);
+        border-radius: 20px;
+    }
+    #post{
+        float :right;
+        width:60px;
+        background-color:var(--primary-color);
+        color:var(--light-color);
+        border-radius: 20px;
+    }
+    /*
+    Game description text area 
+    */
+    #description{
+        width:90%;
+        height:80px;
+        padding:5px;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5em;
+        border:1px solid var(--tertiary-color);
+        border-radius:10px;
+    }
+    /*
+    File upload
+    */
+    #upload-photo{
+        padding:2px;
+        height:32px;
+    }
+    /* 
+    Pseudo element representing the input type file 
+    */
+    input::file-selector-button {
+        color: var(--light-color);
+        font-size:10px;
+        padding:3px 10px 3px 10px;
+        border: 1px solid var(--boxshadow-color);
+        border-radius:8px;
+        margin-right:20px;
+        background:var(--secondary-color);
+    }
+    /*-----------------------------------------------------------------------*/
+    /*---------Game information Page---------------------*/
+    /*---Main game information container----*/
+    .gameinfo-container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        width:100%;
+        height:100vh;
+        margin:auto;
+    }
+    /*---div containing both image and game info card----*/
+    #gameinfo{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        background-color:#FFCE2C;
+        border-radius:10px;
+    }
+    /*---Image of the game----*/
+    .photo{
+        width:150px;
+        height:150px;
+        margin-top:10px;
+        border-radius:20px;
+    }
+    /*---Card with the game description and posted by---*/
+    .gameimginfo{
+        display:flex;
+        flex-direction:row;
+        align-items:flex-start;
+        justify-content:center;
+        width:100%;
+        height:100%;    
+    }
+    /*----Game information card---*/
+    .gameinfo-card{
+        width:50%;
+        height:20%;
+        margin:50px 10px 0 10px;
+    }
+    /*---Input text area----*/
+    input{
+        width:100%;
+        height:40px;
+        border:2px solid #eee;
+        border-radius:5px;
+    }
+    /*----Individual input area margins---*/
+    #gamename , #genre , #condition ,#players{
+        margin:0px 50px 10px 0px;
+    }
+    /*---Description of the game----*/
+    #description {
+        width:100%;
+        height:100px;
+        padding:5px;
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5em;
+        border:2px solid #eee;
+        border-radius:10px;
+    }
+    /*---Posted by card----*/
+    .posted_by_user{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:center;
+        padding:60px 20px 20px 20px;
+        border:2px solid #eee;
+        border-radius:10px;
+        width:50%;
+        height:30%;
+        margin:70px 30px 50px 20px;
+    }
+    /*---Individual input text area in postedby card----*/
+    #customername , #rate {
+        width:100%;
+        min-height:20%;
+    }
+    /*---Heading of the more games section----*/
+    .heading{
+        font-size:16px;
+        text-align :center;
+        margin:10px;
+    }
+    /*---Container for carousel--------*/
+    .main-container{
+        max-width:1100px;
+        height:100%;
+        margin:auto;
+    }
+    /*------Swiper carousel more information div-------*/
+    .swiper-slide .moreinfo{
+        text-align:center;
+        background-color:var(--secondary-color);
+        color:var(--light-color);
+        font-size:12px;
+        width:100%;
+        height:30px;
+        padding-top:5px;
+    }
+    /*---Ad section main container----*/
+    #ad{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        width:300px;
+        margin:auto;
+    }
+    /*---ad section alignment with flex ----*/
+    .ad{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:center;
+        gap:1em;
+        padding:10px;
+        border:2px solid #333;
+        font-size:12px;
+    }
+    /*---ad section image ----*/
+    .ad img{
+        width:80px;
+        height:80px;
+    }
+    /*---ad section close sign ----*/
+    .ad sub{
+        padding:5px;
+        border:2px solid #333;
+    }
+    /*-----------------------------------------------------------------------*/
+
+}

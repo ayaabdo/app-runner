@@ -1,0 +1,23 @@
+<img src="/images/Group102.svg" alt="Banner Group102">
+
+<h1>User Profile Page</h1>
+<p>Received Trade Request:</p>
+
+<!-- PAGE DATA USAGE EXAMPLE -->
+<!-- This is just to provide an example of how you can access the page data -->
+
+<!-- User's name -->
+<p>Name:</p>
+<h2><%= pageData.profile.first_name %>&nbsp;<%= pageData.profile.last_name %></h2>
+
+<!-- Profile photo -->
+<img src="<%=pageData.profile.photo %>" />
+
+<!-- Other profile information -->
+<ul>
+	<!-- Email address -->
+	<li>
+		<label>Email Address:</label><span><%=pageData.profile.email_address %></span>
+	</li>
+
+</ul>

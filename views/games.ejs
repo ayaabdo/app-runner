@@ -1,0 +1,24 @@
+<h1>Games/Inventory Page</h1>
+<p>Instructions: Replace the content of this file with the actual HTML for your page. 
+	Recommend that you preserve the basic card and list structure.</p>
+
+<!-- List of Game Information cards -->
+<ul class="cardlist">
+	<% for(game of pageData.games) { %>
+
+	<!-- Game Information card-->
+	<article id="<%=game.id %>" class="card game clickable" onclick="viewGameInfo(<%=game.id %>)">
+
+		<!-- Title -->
+		<h3><%=game.name %></h3>
+
+		<!-- Thumbnail image -->
+		<img src="<%=game.photo %>" class="thumbnail" />
+
+		<!-- Short description -->
+		<p><%=game.description %></p>
+		<p><%=game.posted_by_user %></p>
+	</article>
+
+	<% } %>
+</ul>

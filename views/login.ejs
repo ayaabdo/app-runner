@@ -1,0 +1,43 @@
+<!-- Login form -->
+
+<div class="signin-form">
+    <form class="signin" action="/auth" method="post">
+        <!--Heading-->
+        <h2 class="label">Sign in</h2>
+        
+        <!--Username-->
+        <div class="form-fields">
+            <label for="username"> Username </label>
+            <input type="text" name="username" id="username" value="test" required>
+        </div>
+
+        <!--Password-->
+        <div class="form-fields">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" value="test" required>
+
+            <!--Forgot password prompt-->
+            <sub>Forgot password?</sub>
+        </div>
+
+        <!--Remember User checkbox-->
+        <div id="checkbox-field">
+            <input type="checkbox" id="checkbox" name=" remember" value="Remember me">
+            <label class="remember" for="remember">Remember me</label>
+        </div>
+        
+        <!--Sign In Button-->
+        <button class="big-btn" type="submit" value="Sign In">Sign In</button>
+
+        <!-- Error message -->
+        <% if(pageData.message) { %>
+        <p class="error"><%=pageData.message %></p>
+        <% } %>
+    
+        <!--Not registered prompt-->
+        <div class="not">Not registered yet?
+			<a class="create" href="/account"><b>Create an account</b></a>
+	    </div>
+
+    </form>
+</div>

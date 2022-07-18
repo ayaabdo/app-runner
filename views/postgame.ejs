@@ -1,0 +1,37 @@
+<!--Post Your game form-->
+<div class="postgame-form">
+    <form class="postgame" action="/createGame" method="POST" enctype="multipart/form-data">
+        <!--Heading-->
+        <h2 class="label"> Post Your Game  </h2><br>
+
+        <!--Name of the game-->
+        <label for="text"> Name of the game : </label>
+        <input type="text" id="name" name="name" value="">
+
+        <!--Genre-->
+        <label for="text">Genre :</label>
+        <input type="text" id="genre" name="genre" value="">
+       
+        <!--No. of Players-->
+        <label for="text">No. of players :</label>
+        <input type="text" id="players" name="players" value="">
+       
+        <!--Condition-->
+        <label for="text">Condition :</label>
+        <input type="text" id="condition" name="condition" value="">
+       
+        <!--Description-->
+        <label for="text">Decription :</label>
+        <textarea id="description2" name="description"></textarea>
+        
+        <!--Upload Image file-->
+        <label for="text">Upload Photo :</label>
+        <input type="file" id="photo" name="photo"><br><br>
+
+        <!--Cancel Button-->
+        <input type="button" id="cancel" value="Cancel" onclick="location.href='/dashboard'" />
+        
+        <!--Post Button-->
+        <input type="submit" id="post" value="Post" />
+    </form>
+</div>

@@ -1,0 +1,126 @@
+<section id="hero">
+    <!--hero image -->
+     <div class="hero">
+        <img src="/images/hero.jpeg" alt="Two boys playing boardgames">
+        <h2>All A-Board</h2>
+        <p>A board game swap website where enthusiasts can come together and trade their old board games with other like-minded people.</p>
+     </div>
+ </section>
+ <div class="main-container">
+ <section id="rules">
+    <div class="headings"> 
+        <h2 >Rules</h2>
+    </div>
+     <div class="container">
+         <div class="rule">
+             <img src="images/boardgame9.jpeg" alt="boardgame">
+             <p>Organize the trade with the other member of All-A-Board </p>
+         </div>
+         <div class="rule">
+             <img src="images/postbox.jpeg" alt="post box">
+             <p> Post your old boardgame.</p>
+         </div>
+         <div class="rule">
+             <img src="images/parcel.jpeg" alt="parcel received">
+             <p>Wait for 1-2 days for arrival. Enjoy playing the boardgame of your choice.</p>
+         </div>
+     </div>
+ </section>
+ 
+ <!--Games on Offer-->
+ <section class="games-on-offer">
+    <div class="headings"> 
+        <h2 >Games on Offer</h2>
+    </div>
+     <div class="swiper mySwiper">
+         <div class="swiper-wrapper">
+           <div class="swiper-slide"><img src="images/boardgame1.jpeg" alt="memory boardgame picture"></div>
+           <div class="swiper-slide"><img src="images/boardgame2.jpeg" alt="solitaire boardgame picture"></div>
+           <div class="swiper-slide"><img src="images/boardgame3.jpeg" alt="pentago boardgame picture"></div>
+           <div class="swiper-slide"><img src="images/boardgame4.jpeg" alt="chess boardgame picture"></div>
+           <div class="swiper-slide"><img src="images/boardgame5.jpeg" alt="old type of chess boardgame picture"></div>
+           <div class="swiper-slide"><img src="images/boardgame6.jpeg" alt="dominoes boardgame pieces picture"></div>  
+         </div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>   
+     </div>  
+ </section>
+
+ <!--Reviews-->
+ <section class="reviews">
+    <div class="headings"> 
+        <h2>Reviews</h2>
+    </div>
+     <div class="swiper mySwipers">
+         <div class="swiper-wrapper">
+           <div class="swiper-slide">
+                 <div class="sm-img">
+                     <img src="images/female1.jpeg" alt="young lady in glasses smiling">
+                 </div>
+                 <div class="comments">
+                         <p>Great experience swapping with like minded people. </p>
+                         <sub><b> - Jenny Lee</b></sub>
+                 </div>
+           </div>
+           <div class="swiper-slide">
+                 <div class="sm-img">
+                     <img src="images/man1.jpeg" alt="profile image of a man">
+                 </div>
+                 <div class="comments">
+                     <p>Enjoy playing different of boardgames without spending too much.</p>
+                     <sub><b> - David Cox</b></sub>
+                 </div>
+           </div>
+           <div class="swiper-slide">
+                 <div class="sm-img">
+                     <img src="images/female2.jpeg" alt="young lady standing">
+                 </div>
+                 <div class="comments">
+                     <p>Reliable,cost effective and clutter free . Amazing idea.</p>
+                     <sub><b> - Jessica Dowd </b></sub>
+                 </div>
+           </div>
+           <div class="swiper-slide">
+                 <div class="sm-img">
+                     <img src="images/man2.jpeg" alt="profile image of young man ">
+                 </div>
+                 <div class="comments">
+                     <p> Happy with all my swaps.Best way to try out more new kinds boardgames. </p>
+                     <br>
+                     <sub><b> - John Doe</b></sub>
+                 </div>
+           </div>
+         </div> 
+       </div>
+ </section>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script >
+     var swiper = new Swiper(".mySwiper", {
+     slidesPerView: 3,
+     spaceBetween: 20,
+     slidesPerGroup: 3,
+     loop: true,
+     loopFillGroupWithBlank: true,
+     keyboard: {
+         enabled: true,
+     },
+     navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev",
+     },
+ });
+     var swiper = new Swiper(".mySwipers", {
+     slidesPerView: 1,
+     spaceBetween: 30,
+     loop: true,
+     loopFillGroupWithBlank: true,
+     autoplay: {
+         delay: 4500,
+         disableOnInteraction: false,
+     },
+
+ });
+
+</script>

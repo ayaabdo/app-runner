@@ -1,0 +1,13 @@
+/*
+ * Games/Inventory Page CSS Styles
+ *
+ * Contains page-specific CSS styles that 
+ * are not used in other pages
+ */
+ 
+ /* Game card thumbnail */
+ .thumbnail {
+	height: 5rem;
+	padding: 0.2rem;
+	width: auto;
+ }

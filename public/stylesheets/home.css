@@ -1,0 +1,190 @@
+/*
+ * Home Page CSS Styles
+ *
+ * Contains page-specific CSS styles that 
+ * are not used in other pages
+ */
+
+/* 
+    Hero Section CSS is specified with image embedded as 
+    background image and position is relative .The heading 
+    and paragraph is positioned as absolute on it.
+    Flex is used for responsiveness.
+*/
+#hero{
+    background-image: url('/images/hero.jpeg') ;
+    background-repeat:no-repeat;
+    background-position: left top;
+    background-size:100%;
+    width:100%;
+    height:20%;
+    margin:0 0 50px 0;
+    position:relative;
+}
+.hero h2 ,.hero p{
+    position:absolute;
+    display:flex;
+    flex-wrap:wrap;
+    width:35%;
+}
+.hero h2{ 
+    top:20%;
+    left:5%;
+    font-family:'Mogra', cursive;
+    font-size:20px;
+    margin-bottom:10px;
+    padding:10px;
+    font-size:25px;
+    color:var(--secondary-color);
+}
+.hero p{
+    top:30%;
+    left:5%;
+    padding:10px;
+    font-size:18px;
+}
+/*
+    Main container housing three sections rules,
+    games on offer,reviews 
+*/
+.main-container{
+    max-width:1100px;
+    height:1480px;
+    margin:auto;
+}
+.headings h2{
+    border: 2px solid var(--filter-color);
+    border-radius:10px;
+    margin:120px 250px 50px 250px;
+    background-color:var(--filter-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--tertiary-color);
+}
+/*
+    Rules Section
+*/
+#rules{
+    width:100%;
+    height:400px;
+    margin-bottom:200px;
+}
+/*
+    Grid is used in the rules section which is 
+    divided into three sub-sections
+*/
+.container{
+    display:grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-gap:1.5rem;
+    margin:50px 65px 50px 65px;
+    padding:10px;
+    text-align:left;
+    position:relative;
+}
+.container .rule{
+    grid-gap:2rem;
+    margin-bottom:10px;
+}
+/*
+    Image specification in the rules section
+*/
+.container .rule img{
+    grid-gap:1rem;
+    width:100%;
+    height:200px;   
+}
+/*
+   Games 0n offer carousel section
+*/
+.games-on-offer{
+    width:100%;
+    height:200px;   
+}
+.swiper {
+    width: 85%;
+    height:250px;
+    margin:10px; 
+}
+/*
+    Carousel section containing images
+*/
+.swiper .swiper-slide {
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap; 
+}
+/*
+    For the image of the games in the
+    games on offer section 
+*/
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color:var(--light-color);
+}
+/*
+    Chevrons for next and previous buttons for 
+    games on offer carousel
+*/
+.mySwiper .swiper-button-next{
+    color:var(--light-color);
+}
+.mySwiper .swiper-button-prev{
+    color:var(--light-color);
+}
+/*
+    Reviews carousel
+*/
+.reviews{
+    width: 100%;
+    height: 300px;
+    margin-top:200px;
+}
+.mySwipers .swiper-slide {
+    background-color:var(--card-color);
+    border:2px solid var(--card-color);
+    border-radius:20px; 
+}
+/*
+    For the image of the customer in the review section 
+*/
+.reviews .sm-img img{
+    width:100px;
+    height:100px;
+    border:2px solid var(--boxshadow-color);
+    border-radius:20%;
+    align-items:center;
+    justify-content:center; 
+}
+/*
+    For the comments of the customer in the review section 
+*/
+.reviews .comments{
+    width:50%;
+    height:50%;
+    align-items:center;
+    justify-content:center; 
+    font-size:14px; 
+    padding:20px;
+    margin-top:20px;
+}
+/*
+ Chevrons for next and previous buttons for reviews carousel
+*/
+.mySwipers .swiper-button-next{
+    color:var(--light-color);
+}
+.mySwipers .swiper-button-prev{
+  color:var(--light-color);
+}
+  
+
+/*------------------------------------------------------------*/

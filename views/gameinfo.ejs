@@ -1,0 +1,94 @@
+<!--Assigning  game object to a local variable-->
+<% let gameInfo = pageData["game"] %>
+<% let suggestedGames = pageData["suggestedGames"] %>
+<!--Game Information container-->
+<section class="gameinfo-container">
+    <div id="gameinfo">
+        <!--Image of the boardgame-->
+        <div class="gamepic">
+            <img class="photo" src="/images/boardgame10.jpeg" alt="<%=gameInfo.name %>">
+        </div>
+        <div class="gameimginfo"> 
+            <div class="gameinfo-card ">
+                <!-- Game title -->
+                <label for="gamename"> Game Name :  </label>
+                <input type="text" id="gamename" name="gamename" value=" <%=gameInfo.name %>" placeholder=""><br>
+                
+                <!-- Genre -->
+                <label for="gamename"> Genre :  </label>
+                <input type="text" id="genre" name="genre" value=" <%=gameInfo.genre%>" placeholder=""><br>
+                
+                <!-- No.of Players -->
+                <label for="gamename"> No. of Players :  </label>
+                <input type="text" id="players" name="players" value=" <%=gameInfo.num_players%>" placeholder=""><br>
+                
+                <!-- Condition -->
+                <label for="gamename"> Condition :  </label>
+                <input type="text" id="condition" name="condition" value=" <%=gameInfo.condition%>" placeholder=""><br>
+                
+                <!-- Description -->
+                <label for="gamename"> Description :  </label><br>
+                <textarea id="description" name="description"><%=gameInfo.description%></textarea><br><br>
+            </div>
+            <!-- Posted by user card -->
+            <div class="posted_by_user ">
+                <p> Posted By:</p><br>
+                <label for="customername"> Name :  </label>
+                <input type="text" id="customername" name="customername" value=" <%=gameInfo.posted_by_first_name%>" placeholder=""><br>
+                <label for="rate"> Rating :  </label>
+                <input type="text" id="rate" name="rate" value=" <%=gameInfo.posted_by_rating%>" placeholder=""><br><br>
+            </div>   
+        </div>
+    </div>                
+</section>
+
+<div class="main-container">
+    <section class="games-on-offer">
+        <%if(suggestedGames.length!=0){%>
+        <div> 
+            <h2 class="heading">More games like this</h2>
+        </div>
+        <div class="swiper mySwiper3">
+            <div class="swiper-wrapper">
+                <% suggestedGames.forEach((game)=>{ %>
+                <div class="swiper-slide">
+                  <img src="<%= game.photo %>" alt="<%= game.name %>">
+                  <div class="moreinfo"><a  href="/gameinfo/<%= game.id %>">More Information</a></div>
+                </div>
+                <% })%>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>  
+        <%}%>
+    </section>
+    <br>
+    <br>
+    <section id="ad">
+        <div class="ad">
+            <img src="/images/ad1.jpeg" alt="let's go on adventure written with scrabble pieces">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, molestiae?</p>
+            <sub>X</sub>
+        </div> 
+    </section>   
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script >
+            
+            var swiper = new Swiper(".mySwiper3", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            keyboard: {
+                enabled: true,
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+            clickable: true,
+           },
+        });
+            
+    </script>

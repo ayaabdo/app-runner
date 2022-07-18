@@ -1,0 +1,107 @@
+/*-------------Post Your Game----------------------*/
+/*
+Background image
+*/
+.postgame-form{
+    background-image:url("/images/Group101.svg");
+    background-repeat:no-repeat;
+    background-position: 50% 10%;
+    background-size:100%;
+    width:100%;
+    height:90vh;
+}
+/*
+Div for post your game form
+*/
+.postgame{
+    display:block;
+    background:var(--light-color);
+    width:500px;
+    height:850px;
+    margin:30px 30% 30px 30%;
+    border:1px solid var(--tertiary-color);
+    border-radius: 20px;
+    box-shadow:3px 3px 3px var(--boxshadow-color);
+    padding:80px 50px 80px 50px;
+}
+/*
+Labels for all the input fields
+*/
+label{
+    font-size:14px;
+    margin-right:10px;
+}
+/*
+Input fields
+*/
+.postgame input{
+    width:100%;
+    height: 40px;
+    margin:10px 0 10px 0;
+    border: 1px solid var(--tertiary-color);
+    border-radius:5px;
+}
+
+/* 
+Post and cancel buttons
+*/
+#cancel{
+    float:left;
+    width:100px;
+    height:40px;
+    border:1px solid var(--tertiary-color);
+    background-color:var(--light-color);
+    border-radius: 20px;  
+}
+#post{
+    float :right;
+    width:100px;
+    height:40px;
+    background-color:var(--primary-color);
+    color:var(--light-color);
+    border-radius: 20px;
+}
+#post {
+    color:var(--light-color);
+}
+#cancel {
+    color:var(--profile-color);
+}
+#post:hover{
+    background-color:var(--secondary-color);
+}
+#cancel:hover{
+    background-color:var(--filter-color);
+}
+
+/*
+Game description text area 
+*/
+#description2{
+    width:100%;
+    height:100px;
+    padding:5px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5em;
+    border:1px solid var(--tertiary-color);
+    border-radius:10px;
+}
+/*
+File upload
+*/
+#photo{
+   padding:7px;
+   height:40px;
+}
+ /* 
+ Pseudo element representing the input type file 
+ */
+input::file-selector-button {
+    color: var(--light-color);
+    font-size:12px;
+    padding:3px 10px 3px 10px;
+    border: 2px solid var(--boxshadow-color);
+    border-radius:8px;
+    margin-right:20px;
+    background:var(--secondary-color);
+}

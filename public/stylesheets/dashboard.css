@@ -1,0 +1,143 @@
+/*
+ * Dashboard Page CSS Styles
+/*
+
+/* Orange pattern behind nav bar */
+.nav_background {
+  background-image: url("/images/nav-background1.svg");
+  background-repeat: no-repeat;
+  background-position: 20% 20%;
+  background-size: 100%;
+  width: 110%;
+  height: 50%;
+  z-index: -1;
+  margin-top: -12%;
+  position: relative;
+  left: -1%;
+  right: auto;
+}
+
+/* Headers */
+h2.first_dashboard_heading {
+  margin: 0.4em 0 0.8em 10%;
+}
+
+h2.dashboard_heading {
+  margin: 1.5em 0 0.8em 10%;
+  text-align: left;
+}
+
+h3.empty_message {
+  font-family: "Roboto";
+  color: #8f8f8f;
+  margin: -0.8em 0 0.5em 10%;
+  font-style: italic;
+}
+
+/* 
+  Request trade cards section 
+*/
+
+/* thumbnail */
+.request_thumbnail {
+  height: 13rem;
+  width: 18rem;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+/* Request message */
+.card.game p.request {
+  padding-top: 1em;
+  margin-left: 1em;
+  display: inline;
+}
+
+.card.game h3.request {
+  margin-left: -1em;
+  text-align: center;
+}
+
+/* View Request button */
+.card.button.request {
+  width: 160px;
+  margin-top: 1em;
+  margin-left: 3.8em;
+}
+
+.cardlist {
+  margin-left: 10%;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+/* Request button tag (for user and game) */
+.card.user {
+  padding: 0.3em 0.7em 0.3em 0.7em;
+  margin: 0em 0em 0.2em 0em;
+  border-radius: 10px;
+  border: none;
+  background-color: #8f8f8f33;
+  box-shadow: none;
+}
+
+.card.game p.italic {
+  margin: 0.2em 0em 0em 0em;
+  font-style: italic;
+  display: inline;
+}
+
+/*
+  How to post a game section
+*/
+.headings h2 {
+  border: 2px solid var(--filter-color);
+  border-radius: 10px;
+  margin: 5em 15.625rem 1em 15.625rem;
+  background-color: var(--filter-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--tertiary-color);
+}
+
+.dashboard_rules {
+  display: flex;
+  justify-content: center;
+  grid-auto-flow: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10em;
+}
+
+.column .rule {
+  padding: 2em;
+  padding-bottom: 0em;
+  margin: 0;
+  width: 350px;
+  height: auto;
+}
+
+.column p.rule {
+  font-weight: bold;
+  padding-top: 0em;
+  text-align: center;
+}
+
+/* Orange pattern behind footer */
+.footer_background {
+  margin-bottom: -10em;
+  position: relative;
+  width: 110%;
+  left: -1%;
+  right: auto;
+  z-index: -1;
+}
+
+/* Remove footer background on small screens */
+@media screen and (max-width: 600px) {
+  .footer_background {
+    display: none;
+  }
+}
